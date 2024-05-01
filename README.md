@@ -5,8 +5,6 @@
 しかもそれぞれのジムごとに休業日は異なるのでその都度調べなくてはいけません。
 そこで私は複数のジムのルート変更日を一つのカレンダーにまとめて確認できるサイトを作成いいたしました。
 
-
-
 - 🔭 I’m currently working on **Potepan style** - 🌱 I’m currently learning **Python** - 💬 Ask me about **vue**
 
 - 
