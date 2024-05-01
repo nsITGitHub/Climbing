@@ -1,13 +1,14 @@
 <h1 align="center">R o u t  S e t  D a y s</h1>
-<h4 align="center">ボルダリングジムのルート変更日を確認できるサイト</h4>
+<h6 align="center">-ボルダリングジムのルート変更日を確認できるサイト-</h6>
 &nbsp;
+<h3>背景</h3>
 ボルダリングジムは月に1回ほど課題の変更をするために休業期間を設けています。
 しかもそれぞれのジムごとに休業日は異なるのでその都度調べなくてはいけません。
 そこで私は複数のジムのルート変更日を一つのカレンダーにまとめて確認できるサイトを作成いいたしました。
 
-- 🔭 I’m currently working on **Potepan style** - 🌱 I’m currently learning **Python** - 💬 Ask me about **vue**
+<h3></h3>
 
-- 
+
 <h3 align="left">言語とツール:</h3>
 <p align="left"><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>&emsp;  <!--HTML-->
  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> &emsp;   <!--css-->
