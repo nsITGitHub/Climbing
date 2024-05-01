@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import jp.co.bol.entity.Climbing;
+import jp.co.bol.entity.Calender;
 import jp.co.bol.entity.News;
 import jp.co.bol.service.jim.Jim_All;
 import jp.co.bol.service.jim.Jim_news_Nobolock;
@@ -25,7 +25,7 @@ public class ClimbingService {
 	@Autowired
 	private Jim_All jim_All;
 	
-	public List<Climbing> findAll(){
+	public List<Calender> findAll(){
 		return climRepo.findAll();
 	}
 	
@@ -33,16 +33,16 @@ public class ClimbingService {
 		return newsRepo.findAll();
 	}
 	
-	public List<Climbing> display(List<String> name_jim) {
-		List<Climbing>listAll = findAll();
-		List<Climbing> resultList = new ArrayList<>();
+	public List<Calender> display(List<String> name_jim) {
+		List<Calender>listAll = findAll();
+		List<Calender> resultList = new ArrayList<>();
 		
 		if(name_jim.contains("All")) {
 			resultList = listAll;
 		}
 		else{
 			for(String nj : name_jim) {
-			for(Climbing list : listAll) {
+			for(Calender list : listAll) {
 				if(nj.contains(list.getBolJim()) && nj.contains(list.getBolName())){
 					resultList.add(list);
 				}
@@ -53,7 +53,7 @@ public class ClimbingService {
 	}
 
 	public List<Jim> category(){
-		List<Climbing> listAll = findAll();
+		List<Calender> listAll = findAll();
 		List<Jim> jims = new ArrayList<>(); 
 		
 		for(int i=0; i<listAll.size(); i++) {
@@ -79,7 +79,7 @@ public class ClimbingService {
 	
 	
 	public void delete() {
-		List<Climbing> list = findAll();
+		List<Calender> list = findAll();
 		climRepo.deleteAll(list);
 		List<News> listNews = newsFindAll();
 		newsRepo.deleteAll(listNews);
@@ -87,13 +87,13 @@ public class ClimbingService {
 	}
 	
 	public void update() {
-		List<Climbing> listAll = findAll();
-		List<Climbing> list = jim_All.climingList();
+		List<Calender> listAll = findAll();
+		List<Calender> list = jim_All.climingList();
 		
 		for(int i=0; i<list.size(); i++) {
 			boolean equal = false;
 			
-			Climbing clim = new Climbing();
+			Calender clim = new Calender();
 			clim = list.get(i);
 			for(int j = 0; j<listAll.size(); j++) {
 				if(clim.getBolDate()==(listAll.get(j).getBolDate() )

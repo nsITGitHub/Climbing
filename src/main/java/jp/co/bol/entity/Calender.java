@@ -10,8 +10,8 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "climbing")
-public class Climbing {
+@Table(name = "calender")
+public class Calender {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

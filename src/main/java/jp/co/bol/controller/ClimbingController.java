@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import jakarta.validation.Valid;
-import jp.co.bol.entity.Climbing;
+import jp.co.bol.entity.Calender;
 import jp.co.bol.service.ClimbingService;
 import jp.co.bol.service.jim.Jim_news_Nobolock;
 
@@ -38,7 +38,7 @@ public class ClimbingController {
 	}
 	
 	 @PostMapping("/update")
-		public String update(@ModelAttribute("climbs") Climbing climb ,Model model) throws UnsupportedEncodingException  {
+		public String update(@ModelAttribute("climbs") Calender climb ,Model model) throws UnsupportedEncodingException  {
 		 climbService.update();
 		 climbService.updateNews();
 		 return "redirect:/";

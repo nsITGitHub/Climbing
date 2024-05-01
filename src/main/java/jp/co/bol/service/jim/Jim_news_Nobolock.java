@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import jp.co.bol.entity.Climbing;
+import jp.co.bol.entity.Calender;
 import jp.co.bol.entity.News;
 
 @Service

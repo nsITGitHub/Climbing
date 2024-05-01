@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 
-import jp.co.bol.entity.Climbing;
+import jp.co.bol.entity.Calender;
 import jp.co.bol.modal.Jim;
 import jp.co.bol.repository.ClimbingRepository;
 
@@ -29,7 +29,7 @@ public class Jim_calendar_Nobolock {
 	@Autowired
 	private Jim_AllDriver JDriver; 
 	
-	public List<Climbing> Jim_Nobolock(){
+	public List<Calender> Jim_Nobolock(){
 		//driverのインスタンス作成
 		WebDriver driver = JDriver.driver();
 		
@@ -41,7 +41,7 @@ public class Jim_calendar_Nobolock {
 		//カテゴリーの内容を全てを取得 10種類
 		List<WebElement> category = driver.findElements(By.xpath("//*[@id=\"ai1ec-calendar\"]/div[contains(@class,\"ai1ec-calendar-toolbar\")]/ul/li/div/div/a/span"));
 		//List作成　DBへ保存用
-		List<Climbing> list = new ArrayList<>();
+		List<Calender> list = new ArrayList<>();
 		//★bolyearを取得
 		int bolYear = calendar.get(Calendar.YEAR);
 		//★bolMonthを取得
@@ -91,7 +91,7 @@ public class Jim_calendar_Nobolock {
 				//月の要素分繰り返す
 				for(int k = 0; k < elements.size();k++) {
 					WebElement e = elements.get(k);
-					Climbing clim = new Climbing();
+					Calender clim = new Calender();
 			
 					//テキストを取得
 					//★bolText()で格納

@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import jp.co.bol.entity.Climbing;
+import jp.co.bol.entity.Calender;
 import jp.co.bol.entity.News;
 
 @Service
@@ -19,8 +19,8 @@ public class Jim_All {
 	private Jim_news_Nobolock J_news_Nobo;
 	
 	//各ジムのlistを一つにまとめる
-	public List<Climbing> climingList(){
-		List<Climbing> listAll = new ArrayList<>();
+	public List<Calender> climingList(){
+		List<Calender> listAll = new ArrayList<>();
 		
 		//listAllに格納
 		listAll.addAll(J_Nobo.Jim_Nobolock());
