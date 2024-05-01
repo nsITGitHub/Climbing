@@ -1,14 +1,72 @@
 <h1 align="center">R o u t  S e t  D a y s</h1>
 <h6 align="center">-ボルダリングジムのルート変更日を確認できるサイト-</h6>
-&nbsp;
-<h3>背景</h3>
-ボルダリングジムは月に1回ほど課題の変更をするために休業期間を設けています。
+
+## 背景 
+ボルダリングジムは月に1回ほど課題(ルート)の変更をするために休業期間を設けています。
 しかもそれぞれのジムごとに休業日は異なるのでその都度調べなくてはいけません。
-そこで私は複数のジムのルート変更日を一つのカレンダーにまとめて確認できるサイトを作成いいたしました。
+また、ボルダリングジムはそれぞれで多くのイベントを行っているが、その情報の取得も手軽とは言い難いです。
+そこで私は複数のジムのルート変更日とイベントを一つのカレンダーにまとめて確認できるサイトを作成いいたしました。
+
+
+## 利用方法
+- カレンダーで各ボルダリングジムのルート変更日とイベントを確認する。
+　beforeボタンとafterボタンで月の変更が可能。
+- serchで知りたいジムのルート変更日を検索する。
+- NEWSから各jimの最新情報を知ることができる。
+　イベントをクリックすることで元のURLへ行き、詳細情報を確認しに行ける。
+
+
+## 要件定義
+- ボルダリングジムのHPから必要情報を取得する。
+- 取得した情報をDBに格納する。
+- 月の更新が可能なカレンダーを作成する。
+- 取得したルート変更日やイベントをカレンダーの該当する日付に埋め込む。
+- カレンダー内のルート変更日をクリックすると詳細情報を確認できる。
+- 各ジム事に調べられるように検索機能を作る。
+- DBに格納する情報を更新できるようにする。
+- イベントを一覧にして表示する。
+- それぞれのイベントから元HPの詳細に飛べるようにする。
+
+
+## 実装機能
+- 月更新可能のカレンダーと各情報の埋め込み
+- 各ジムごとの検索機能
+- seleniumによる情報の更新機能
+- イベントの一覧表示
+
+## DB設計 (climbing)
+- calender
+  ルート変更日に関する情報を格納
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | bigint       | NO   | PRI | NULL    | auto_increment |
+| date  | int          | YES  |     | NULL    |                |
+| jim   | varchar(255) | YES  |     | NULL    |                |
+| month | int          | YES  |     | NULL    |                |
+| name  | varchar(255) | YES  |     | NULL    |                |
+| text  | varchar(255) | YES  |     | NULL    |                |
+| year  | int          | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+
+- news
+  イベントに関する情報を格納
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | bigint       | NO   | PRI | NULL    | auto_increment |
+| date  | int          | YES  |     | NULL    |                |
+| jim   | varchar(255) | YES  |     | NULL    |                |
+| link  | varchar(255) | YES  |     | NULL    |                |
+| month | int          | YES  |     | NULL    |                |
+| news  | varchar(255) | YES  |     | NULL    |                |
+| year  | int          | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
 
 <h3></h3>
-![サンプル](https://github.com/nsITGitHub/Climbing/assets/167949592/9f4984b7-3e18-4790-ba86-37bd40f86c17)
 
+<h3></h3>
+![サンプル](https://github.com/nsITGitHub/Climbing/assets/167949592/40684674-4bf6-4109-8b69-96da04e24ccc)
 
 <h3 align="left">言語とツール:</h3>
 <p align="left"><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>&emsp;  <!--HTML-->
