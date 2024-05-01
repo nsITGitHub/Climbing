@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/calendar.css">
+<script src="js/calendar.js" defer></script>
+<title>RoutSetDays</title>
+</head>
+<body>
+	<div class="outer-container">
+		<div class="side-container">
+			<h2 class="uline_style04">RoutSetDays</h2>
+			<h2 class="monthselect">Month</h2>
+			<div>
+				<button id="prev" type="button">before</button>
+			</div>
+			<div>
+				<button id="next" type="button">after</button>
+			</div>
+			<table class="category">
+				<thead>
+					<td class="search">search</td>
+				</thead>
+				<thead>
+					<form th:action="@{/display}" th:method="post">
+						<p>
+							<input type="hidden" name="jimcategory" value="0" checked>
+						</p>
+						<td class="searchcategory"><label><input
+								type="checkbox" name="jimcategory" value="All" />全件検索</label></td>
+						<tr class="searchcategory" th:each="n:${names}" th:object="${n}">
+							<td><label> <input type="checkbox"
+									name="jimcategory" th:text="*{bolJim} + .+ *{bolName}"
+									th:value="*{bolJim}+*{BolName}" />
+							</label>
+							<td></td>
+						</tr>
+						<tr>
+							<button class="searchbutton" type="submit">submit</button>
+						</tr>
+					</form>
+				</thead>
+			</table>
+			<br>
+			<br>
+			<br>
+			<br>
+			<tr>
+				<!-- 削除予定 -->
+				<form th:action="@{/update}" th:method="post">
+					<button type="submit">更新（テスト用）</button>
+				</form>
+				<form th:action="@{/delete}" th:method="post">
+					<button type="submit">削除（テスト用）</button>
+				</form>
+			</tr>
+		</div>
+		<div class="container">
+			<!-- Calendar -->
+
+			<div id="calendar"></div>
+			<h3 class="news">N E W S</h3>
+			<div class="scroll">
+				<table class="newsAll">
+					<thead>
+						<tr>
+							<td class="SamplenewsDay">年 月 日</td>
+							<td class="SamplenewsJim">ジ ム 名</td>
+							<td class="Samplenewscontents">イ ベ ント</td>
+						</tr>
+						<tr class="newsList" th:each="ns:${news}" th:object="${ns}">
+							<td class="newsDay"
+								th:text="*{bolYear}+年+*{bolMonth}+月+*{bolDate}+日"></td>
+							<td class="newsJim" th:text="*{bolJim}"></td>
+<<<<<<< HEAD
+							<td class="newscontents"><a class="newsLink"  th:href="@{*{bollink}}" th:text="*{bolnews}"></a></td>
+							<td hidden class="newsYear" th:text="*{bolYear}">
+							<td hidden class="newsMonth" th:text="*{bolMonth}">
+							<td hidden class="newsDate" th:text="*{bolDate}">
+							<td hidden class="link" th:text="*{bollink}">
+=======
+							<td class="newscontents"><a th:href="@{*{bollink}}"
+								th:text="*{bolnews}"></a></td>
+							<td hidden class="newsYear" th:text="*{bolYear}">
+							<td hidden class="newsMonth" th:text="*{bolMonth}">
+							<td hidden class="newsDate" th:text="*{bolDate}">
+>>>>>>> origin/master
+						</tr>
+					</thead>
+					<thred>
+					<tr>
+					</tr>
+					</thred>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<table hidden>
+		<tr class="climsList" th:each="climb:${climbs}" th:object="${climb}">
+			<td class="bolName" th:text="*{bolName}">
+			<td class="bolText" th:text="*{bolText}">
+			<td class="bolMonth" th:text="*{bolMonth}">
+			<td class="bolDate" th:text="*{bolDate}">
+			<td class="bolYear" th:text="*{bolYear}">
+			<td class="bolJim" th:text="*{bolJim}">
+			<td class="id" th:text="*{id}">
+		</tr>
+	</table>
+
+</body>
+</html>
