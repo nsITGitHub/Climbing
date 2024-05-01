@@ -45,6 +45,8 @@
 			<br>
 			<br>
 			<br>
+			<br>
+			<br>
 			<tr>
 				<!-- 削除予定 -->
 				<form th:action="@{/update}" th:method="post">
@@ -78,12 +80,6 @@
 							<td hidden class="newsMonth" th:text="*{bolMonth}">
 							<td hidden class="newsDate" th:text="*{bolDate}">
 							<td hidden class="link" th:text="*{bollink}">
-
-							<td class="newscontents"><a th:href="@{*{bollink}}"
-								th:text="*{bolnews}"></a></td>
-							<td hidden class="newsYear" th:text="*{bolYear}">
-							<td hidden class="newsMonth" th:text="*{bolMonth}">
-							<td hidden class="newsDate" th:text="*{bolDate}">
 
 						</tr>
 					</thead>
