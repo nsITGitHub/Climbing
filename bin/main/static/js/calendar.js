@@ -81,11 +81,7 @@ let newsList = document.querySelectorAll('.newsList')
 					if (bolYear == year && bolMonth == month && bolDate == dayCount) {
       				calendarHtml +=`<p class="calendarevent"><a class="calenderlink" href="${bolLink}}">${bolnews.substring(0,20)}</a></p>`
 					}
-					
-					if (bolYear == year && bolMonth == month && bolDate == dayCount) {
-      				calendarHtml +=`<p class="calendarevent">${bolnews.substring(0,20)}</p>`
 
-    				}
 				})
   				
                                 
