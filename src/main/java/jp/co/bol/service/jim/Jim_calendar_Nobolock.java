@@ -22,8 +22,6 @@ import jp.co.bol.entity.Climbing;
 import jp.co.bol.modal.Jim;
 import jp.co.bol.repository.ClimbingRepository;
 
-//4~6月までしか取得できないのはなぜ
-//いきなり8月までを取得できた????
 
 @Service
 public class Jim_calendar_Nobolock {
