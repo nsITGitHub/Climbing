@@ -66,7 +66,7 @@
 <h3></h3>
 
 <h3></h3>
-![サンプル](src/main/resources/static/img/サンプル.png)
+![サンプル](https://github.com/nsITGitHub/Climbing/assets/167949592/a10496a8-1260-4272-886d-ff29c6418920)
 
 <h3 align="left">言語とツール:</h3>
 <p align="left"><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>&emsp;  <!--HTML-->
