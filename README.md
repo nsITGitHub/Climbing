@@ -34,7 +34,7 @@
 ## 実装機能
 - 月更新可能のカレンダーと各情報の埋め込み
 - 各ジムごとの検索機能
-- seleniumによる情報の更新機能
+- 情報の更新機能
 - イベントの一覧表示
 
 ## DB設計 
@@ -49,7 +49,7 @@
  month | int          | YES  |     | NULL    |                
  name  | varchar(255) | YES  |     | NULL    |                
  text  | varchar(255) | YES  |     | NULL    |                
- year  | int          | YES  |     | NULL    |                
+ year  | int          | YES  |     | NULL    |              
 
 
 - **news**<br>
@@ -67,10 +67,15 @@
 
 
 ## 開発環境
-
 HTML   |CSS    |JavaScript |Java   |MySQL  |Spring        |Selenium    |Git
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-5    |-    |-          |17.0.10|8.3.0  |0.0.1-SNAPSHOT|4.19.1      |2.45.0
- <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> |  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>            | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>         | <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>          |<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>          | <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a>                  |<a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a>  |<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>  
+5    |-    |-    |17.0.10|8.3.0  |3.2.4　　|4.19.1      |2.45.0
+ <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> |  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>            | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>         | <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>          |<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>          | <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a>                  |<a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a>  |<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> 　　|<a href="https://willbrains.jp/" target="_blank" rel="noreferrer"><img ></a>
+
+ ## 工夫した点
+- serviceフォルダ内のseleniumを実装した複数のクラスはJim_Allクラスで一つのリストにまとめてからDBに格納するように設計した。<br>
+ そうすることで今後ジムの種類を増やしたとしてもJim_All内のlistに追加するだけでよくなり、拡張性を意識した（画像用意）
+- スクレイピングは動的サイトにも対応できるようにSeleniumフレームワークを採用した。
+- カレンダーは月更新やルート変更日の埋め込みなど動的な動作に対応できるようにjavascriptで作成。
 
  
