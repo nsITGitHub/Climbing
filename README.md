@@ -1,6 +1,8 @@
 <h1 align="center">R o u t  S e t  D a y s</h1>
 <h6 align="center">-ボルダリングジムのルート変更日を確認できるサイト-</h6>
 
+![メイン画面1](https://github.com/nsITGitHub/Climbing/assets/167949592/a10496a8-1260-4272-886d-ff29c6418920)
+![メイン画面2](https://github.com/nsITGitHub/Climbing/assets/167949592/d9c115ba-1524-4fbf-b258-0c11d08fe1a4)
 ## 背景 
 ボルダリングジムは月に1回ほど課題(ルート)の変更をするために休業期間を設けています。
 しかもそれぞれのジムごとに休業日は異なるのでその都度調べなくてはいけません。
@@ -63,10 +65,8 @@
 | year  | int          | YES  |     | NULL    |                |
 
 
-<h3></h3>
 
-<h3></h3>
-![サンプル](https://github.com/nsITGitHub/Climbing/assets/167949592/a10496a8-1260-4272-886d-ff29c6418920)
+
 
 <h3 align="left">言語とツール:</h3>
 <p align="left"><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>&emsp;  <!--HTML-->
