@@ -53,10 +53,8 @@ public class Jim_news_Nobolock {
 			String event = n.findElement(By.cssSelector("a")).getText();
 			//イベントのリンク取得
 			String eventLink = n.findElement(By.cssSelector("a")).getAttribute("href");
-			 String encoding = "UTF-8";
-			 String result = URLDecoder.decode(eventLink, encoding);
-			//if(eventLink.contains("()")) eventLink=eventLink.replace("(", "").replace(")", "");
-			
+			String encoding = "UTF-8";
+			String result = URLDecoder.decode(eventLink, encoding);
 			
 			newsList.setBolDate(bolDate);
 			newsList.setBolJim(bolJim);
@@ -71,7 +69,6 @@ public class Jim_news_Nobolock {
 		driver.findElement(By.xpath("//a[@class='page-numbers'][contains(@href,'"+ i +"')]")).click();
 		
 		//目的の要素が出るまで待機
-		
 		wait.until (ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//span[@class='page-numbers current'][contains(text(),'"+ i +"')]")));	
 		
