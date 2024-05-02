@@ -56,13 +56,10 @@ let newsList = document.querySelectorAll('.newsList')
         
              	
   				climsList.forEach(e =>{
-					//let bolName = e.querySelector('.bolName')
 					let bolText = e.querySelector('.bolText').textContent
 					let bolMonth = e.querySelector('.bolMonth').textContent
 					let bolDate = e.querySelector('.bolDate').textContent
 					let bolYear = e.querySelector('.bolYear').textContent
-					//let bolJim = e.querySelector('.bolJim').textContent
-					//let id = e.querySelector('.id').textContent
 			
 					
 					if (bolYear == year && bolMonth == month && bolDate == dayCount) {
@@ -138,13 +135,15 @@ function moveCalendar(e) {
 document.querySelector('#prev').addEventListener('click', moveCalendar)
 document.querySelector('#next').addEventListener('click', moveCalendar)
 
+showCalendar(year, month)
+
+
 /*document.addEventListener("click", function(e) {
     if(e.target.classList.contains("calendar_td")) {
         alert('クリックした日付は' + e.target.dataset.date + 'です')
     }
 })*/
 
-showCalendar(year, month)
   /*
 var target = documet.getElementById("newsList")
 target.scrollIntoView("false")
