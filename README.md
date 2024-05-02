@@ -1,18 +1,21 @@
 <h1 align="center">R o u t  S e t  D a y s</h1>
 <h6 align="center">-ボルダリングジムのルート変更日を確認できるサイト-</h6>
 
+![メイン画面1](https://github.com/nsITGitHub/Climbing/assets/167949592/a10496a8-1260-4272-886d-ff29c6418920)
+![メイン画面2](https://github.com/nsITGitHub/Climbing/assets/167949592/d9c115ba-1524-4fbf-b258-0c11d08fe1a4)
+
 ## 背景 
-ボルダリングジムは月に1回ほど課題(ルート)の変更をするために休業期間を設けています。
-しかもそれぞれのジムごとに休業日は異なるのでその都度調べなくてはいけません。
-また、ボルダリングジムはそれぞれで多くのイベントを行っているが、その情報の取得も手軽とは言い難いです。
-そこで私は複数のジムのルート変更日とイベントを一つのカレンダーにまとめて確認できるサイトを作成いいたしました。
+ボルダリングジムは月に1回ほど課題(ルート)の変更をするために休業期間を設けています。<br>
+しかもそれぞれのジムごとに休業日は異なるのでその都度調べなくてはいけません。<br>
+また、ボルダリングジムはそれぞれのジムで多くのイベントを行っているが、その情報の取得も手軽とは言い難いと感じました。<br>
+そこで私は複数のジムのルート変更日と実施してるイベントを一つのカレンダーにまとめて確認できるサイトを作成いいたしました。<br>
 
 
 ## 利用方法
 - カレンダーで各ボルダリングジムのルート変更日とイベントを確認する。
 　beforeボタンとafterボタンで月の変更が可能。
 - serchで知りたいジムのルート変更日を検索する。
-- NEWSから各jimの最新情報を知ることができる。
+- NEWSから各jimの最新情報を知ることができる。<br>
 　イベントをクリックすることで元のURLへ行き、詳細情報を確認しに行ける。
 
 
@@ -31,50 +34,48 @@
 ## 実装機能
 - 月更新可能のカレンダーと各情報の埋め込み
 - 各ジムごとの検索機能
-- seleniumによる情報の更新機能
+- 情報の更新機能
 - イベントの一覧表示
 
-## DB設計 (climbing)
-- calender
-  ルート変更日に関する情報を格納
-+-------+--------------+------+-----+---------+----------------+
-| Field | Type         | Null | Key | Default | Extra          |
-+-------+--------------+------+-----+---------+----------------+
-| id    | bigint       | NO   | PRI | NULL    | auto_increment |
-| date  | int          | YES  |     | NULL    |                |
-| jim   | varchar(255) | YES  |     | NULL    |                |
-| month | int          | YES  |     | NULL    |                |
-| name  | varchar(255) | YES  |     | NULL    |                |
-| text  | varchar(255) | YES  |     | NULL    |                |
-| year  | int          | YES  |     | NULL    |                |
-+-------+--------------+------+-----+---------+----------------+
+## DB設計 
+- **calender**<br>
+  ルート変更日に関する情報を格納するテーブル
 
-- news
-  イベントに関する情報を格納
-+-------+--------------+------+-----+---------+----------------+
-| Field | Type         | Null | Key | Default | Extra          |
-+-------+--------------+------+-----+---------+----------------+
-| id    | bigint       | NO   | PRI | NULL    | auto_increment |
-| date  | int          | YES  |     | NULL    |                |
-| jim   | varchar(255) | YES  |     | NULL    |                |
-| link  | varchar(255) | YES  |     | NULL    |                |
-| month | int          | YES  |     | NULL    |                |
-| news  | varchar(255) | YES  |     | NULL    |                |
-| year  | int          | YES  |     | NULL    |                |
-+-------+--------------+------+-----+---------+----------------+
+ Field | Type         | Null | Key | Default | Extra          
+-------|--------------|------|-----|---------|----------------
+ id    | bigint       | NO   | PRI | NULL    | auto_increment 
+ date  | int          | YES  |     | NULL    |                
+ jim   | varchar(255) | YES  |     | NULL    |                
+ month | int          | YES  |     | NULL    |                
+ name  | varchar(255) | YES  |     | NULL    |                
+ text  | varchar(255) | YES  |     | NULL    |                
+ year  | int          | YES  |     | NULL    |              
 
-<h3></h3>
 
-<h3></h3>
-![サンプル](https://github.com/nsITGitHub/Climbing/assets/167949592/40684674-4bf6-4109-8b69-96da04e24ccc)
+- **news**<br>
+  イベントに関する情報を格納するテーブル
 
-<h3 align="left">言語とツール:</h3>
-<p align="left"><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>&emsp;  <!--HTML-->
- <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> &emsp;   <!--css-->
- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> &emsp;  <!--JS-->
-<a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>&emsp;  <!--JAVA-->
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> &emsp;  <!--MYSQL-->
-<a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a>  &emsp; <!--spring-->   
-<a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> &emsp;  
- <!--selenium-->
- <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>  &emsp;  <!--git--> </p>  
+ Field | Type         | Null | Key | Default | Extra          
+-------|--------------|------|-----|---------|----------------
+ id    | bigint       | NO   | PRI | NULL    | auto_increment 
+ date  | int          | YES  |     | NULL    |               
+ jim   | varchar(255) | YES  |     | NULL    |                
+ link  | varchar(255) | YES  |     | NULL    |                
+ month | int          | YES  |     | NULL    |                
+ news  | varchar(255) | YES  |     | NULL    |                
+ year  | int          | YES  |     | NULL    |                
+
+
+## 開発環境
+HTML   |CSS    |JavaScript |Java   |MySQL  |Spring        |Selenium    |Git
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+5    |-    |-    |17.0.10|8.3.0  |3.2.4　　|4.19.1      |2.45.0
+ <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> |  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>            | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>         | <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>          |<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>          | <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a>                  |<a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a>  |<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> 　　|<a href="https://willbrains.jp/" target="_blank" rel="noreferrer"><img ></a>
+
+ ## 工夫した点
+- serviceフォルダ内のseleniumを実装した複数のクラスはJim_Allクラスで一つのリストにまとめてからDBに格納するように設計した。<br>
+ そうすることで今後ジムの種類を増やしたとしてもJim_All内のlistに追加するだけでよくなり、拡張性を意識した（画像用意）
+- スクレイピングは動的サイトにも対応できるようにSeleniumフレームワークを採用した。
+- カレンダーは月更新やルート変更日の埋め込みなど動的な動作に対応できるようにjavascriptで作成。
+
+ 
