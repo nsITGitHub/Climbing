@@ -72,13 +72,11 @@ let newsList = document.querySelectorAll('.newsList')
 					let bolMonth = e.querySelector('.newsMonth').textContent
 					let bolDate = e.querySelector('.newsDate').textContent
 					let bolYear = e.querySelector('.newsYear').textContent
-
 					let bolLink = e.querySelector('.link').textContent
 					
 					if (bolYear == year && bolMonth == month && bolDate == dayCount) {
-      				calendarHtml +=`<p class="calendarevent"><a class="calenderlink" href="${bolLink}}">${bolnews.substring(0,20)}</a></p>`
+      				calendarHtml +=`<p class="calendarevent"><a class="calenderlink" href="${bolLink}}" target="_blank">${bolnews.substring(0,20)}</a></p>`
 					}
-
 				})
   				
                                 

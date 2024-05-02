@@ -75,7 +75,7 @@
 								th:text="*{bolYear}+年+*{bolMonth}+月+*{bolDate}+日"></td>
 							<td class="newsJim" th:text="*{bolJim}"></td>
 
-							<td class="newscontents"><a class="newsLink"  th:href="@{*{bollink}}" th:text="*{bolnews}"></a></td>
+							<td class="newscontents"><a class="newsLink"  th:href="@{*{bollink}}" target="_blank" th:text="*{bolnews}"></a></td>
 							<td hidden class="newsYear" th:text="*{bolYear}">
 							<td hidden class="newsMonth" th:text="*{bolMonth}">
 							<td hidden class="newsDate" th:text="*{bolDate}">

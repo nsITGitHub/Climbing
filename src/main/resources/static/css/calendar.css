@@ -270,11 +270,11 @@ button{
 	margin-top: 50%;
     position: relative;
     top: 5%;
-	
 }
 
 
 #calendar .calendar_td {
+	font-weight: bolder;
     width: 200px;
 	height: 100px;
 	vertical-align: top;
