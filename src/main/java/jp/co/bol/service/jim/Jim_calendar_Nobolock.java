@@ -66,7 +66,7 @@ public class Jim_calendar_Nobolock {
 		*/
 		
 		try{
-		for(int m = 0; m < 5; m++) {
+		for(int m = 0; m < 3; m++) {
 			//目的の月を取得
 			int bolMonth = monthThis + m;
 			if(bolMonth>12) {

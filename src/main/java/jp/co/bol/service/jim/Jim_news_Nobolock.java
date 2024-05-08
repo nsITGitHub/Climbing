@@ -36,7 +36,7 @@ public class Jim_news_Nobolock {
 		String bolJim = driver.findElement(By.xpath("//h1[@class='logo']")).getText();
 		
 		//DBへの格納対象をリストに加える。
-		for(int i =2; i<11 ;i++) {
+		for(int i =2; i<5 ;i++) {
 			//DBへの格納対象を含むdiv要素を取得
 			List<WebElement> newsAll = driver.findElements(By.cssSelector("li.clearfix"));
 		
