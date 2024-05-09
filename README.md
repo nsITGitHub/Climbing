@@ -38,6 +38,12 @@ beforeボタンとafterボタンで月の変更が可能。
 |![機能1_月更新](https://github.com/nsITGitHub/Climbing/assets/167949592/5ef6c38e-df76-4bde-bc14-9124aec288f5)|![機能2_検索](https://github.com/nsITGitHub/Climbing/assets/167949592/937df61c-a189-4d44-81f9-676ca84ff863)|
 | ボタンで月の変更可能。イベント等を確認(黒枠:ルート変更日,赤枠:イベント)。 | serchで知りたいジムのルート変更日を検索する。複数検索も可能|
 
+| イベントの一覧表示 |　情報の更新機能 |
+| ---- | ---- |
+|![機能３_イベント](https://github.com/nsITGitHub/Climbing/assets/167949592/d8ff2e10-9f9c-41a6-8ce3-d8a345c88f61)|![機能4_全更新](https://github.com/nsITGitHub/Climbing/assets/167949592/0a826320-739b-4c1b-80d3-dee112b143c1)|
+| 各ジムの新着のイベントを閲覧可能。 | 各ジムから情報を取得し、すべて更新|
+
+
 
 - 情報の更新機能
 - イベントの一覧表示
