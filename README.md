@@ -79,7 +79,7 @@ beforeボタンとafterボタンで月の変更が可能。
 
 
 ## 開発環境
-HTML|&ensp; CSS &ensp;|JavaScript |Java   |MySQL  |Spring|Selenium|Git |eclipse
+HTML|CSS|JavaScript |Java   |MySQL  |Spring|Selenium|Git |eclipse
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 5    |-    |-    |17.0.10|8.3.0  |3.2.4　　|4.19.1      |2.45.0 |4.30.0
 フロント</span>|フロント|フロント|バック|データベース|フレームワーク|スクレイピング|管理|統合開発
