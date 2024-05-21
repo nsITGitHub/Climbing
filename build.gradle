@@ -4,6 +4,12 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.4'
 }
 
+apply plugin: "war"
+
+tasks.war {
+    archiveFileName = 'Climbing.war'
+}
+
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
@@ -24,6 +30,7 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
 tasks.named('test') {
