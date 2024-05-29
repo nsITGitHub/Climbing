@@ -1,8 +1,0 @@
-memo(driverの実行について)
-
-exeフォルダーをデスクトップへコピーすること
-また、osや実行するサイトを変更する場合は適宜driverの内容を変更すること
-→[exeフォルダーの構成]exe/(各driver-os)/(各driver)
-
-driverを変更した場合、Jim_AllDriverクラスのsetPropertyメソッドを変更
-→desktop+"/exe/(各driver-os)/(各driver)"
