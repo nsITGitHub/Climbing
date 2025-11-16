@@ -1,5 +1,4 @@
-<h1 align="center">Rout SetDays</h1>
-<h6 align="center">-ボルダリングジムのルート変更日を確認できるサイト-</h6>
+<h2 align="center">-ボルダリングジムのルート変更日を確認できるサイト-</h2>
 
 ![メイン画面1](https://github.com/nsITGitHub/Climbing/assets/167949592/a10496a8-1260-4272-886d-ff29c6418920)
 ![メイン画面2](https://github.com/nsITGitHub/Climbing/assets/167949592/d9c115ba-1524-4fbf-b258-0c11d08fe1a4)
